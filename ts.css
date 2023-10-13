@@ -1,0 +1,30 @@
+/* Set the global font to Ubuntu */
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Set the font for h1 to Helvetica */
+h1 {
+    font-family: 'Helvetica', sans-serif;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+}
+
+button {
+    display: block;
+    margin-top: 20px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px;
+    width: calc(100% - 30px);
+}
+
+.glow {
+    box-shadow: 0 0 5px #FFCC00, 0 0 10px #FFCC00, 0 0 15px #FF9900, 0 0 20px #FF9900;
+}
