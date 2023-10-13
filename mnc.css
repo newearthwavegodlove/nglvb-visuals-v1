@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* full viewport height */
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.mushroom {
+    font-size: 100px;
+}
+
+.footer {
+    background-color: #f0f0f0;
+    padding: 20px 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer a {
+    color: #555;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.footer a:hover {
+    color: #777;
+    text-decoration: underline;
+}
+
+.footer-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+@keyframes blink {
+
+    0%,
+    60% {
+        opacity: 1;
+    }
+
+    61%,
+    100% {
+        opacity: 0;
+    }
+}
+
+#creation-interface #question {
+    animation: blink 5s infinite;
+}
+
+#creation-interface {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* This will take up the full height of the viewport */
+}
+
+.home-link-container {
+    text-align: center;
+    padding-bottom: 1%;
+    /* Adjust this to move the "Home" link more up */
+}
+
+.home-link {
+    font-size: 20px;
+    text-decoration: none;
+    color: #555;
+}
+
+.home-link:hover {
+    color: #777;
+    /* This will change the color on hover for a subtle effect */
+}
+
+.btn-gradient {
+    /* ... your existing styles ... */
+
+    /* Rainbow gradient background */
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 500% 100%;
+    /* This makes our gradient wide, allowing us to animate its position */
+
+    /* Animation */
+    animation: slideRainbow 5s infinite linear;
+}
+
+@keyframes slideRainbow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.btn-gradient:hover {
+    animation: rainbow 5s infinite; /* Rainbow gradient animation on hover */
+}
