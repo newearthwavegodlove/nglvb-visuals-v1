@@ -1,0 +1,48 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.emojis {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.footer {
+    background-color: #f0f0f0;
+    padding: 20px 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer a {
+    color: #555;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.footer a:hover {
+    color: #777;
+    text-decoration: underline;
+}
+
+.footer-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
