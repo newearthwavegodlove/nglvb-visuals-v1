@@ -45,6 +45,8 @@ document.addEventListener("DOMContentLoaded", function() {
             // Show "Mycelium neuron computer is HERE NOW"
             message.textContent = "Mycelium neuron computer is HERE NOW";
             message.style.opacity = "1";
+            message.classList.add('wavey');  // Add this line here
+
 
             setTimeout(function() {
                 message.style.opacity = "0";  // Fade out the message
@@ -55,12 +57,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
                     playButton.addEventListener("click", function() {
                         playButton.style.opacity = "0";  // Fade out Play button
-
+                        const audio = document.getElementById("song");
+                        audio.play();
                         // Show Lyrics
                         const lyricsInterval = setInterval(function() {
                             if (lyricsIndex < lyrics.length) {
                                 lyricsDiv.textContent += lyrics[lyricsIndex] + " ";
                                 lyricsDiv.style.opacity = "1"; // Make lyrics visible
+                                lyricsDiv.classList.add('wavey');  // Add this line here
+
                                 lyricsIndex++;
                             } else {
                                 clearInterval(lyricsInterval);

@@ -33,12 +33,19 @@ input:focus {
 
 #message {
     position: fixed;
+    /* Keeps the message fixed on the screen */
     top: 50%;
+    /* Center vertically */
     left: 50%;
+    /* Center horizontally */
     transform: translate(-50%, -50%);
+    /* Adjust for exact centering */
     font-size: 36px;
+    /* Sets the font size */
     opacity: 0;
+    /* Start with hidden text */
     transition: opacity 2s ease-in-out;
+    /* Fade-in effect */
 }
 
 #playButton {
@@ -68,4 +75,21 @@ input:focus {
         top: 10%;
         left: 10%;
         /* New styles for positioning */
+}
+
+@keyframes waveAnimation {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.wavey {
+    animation: waveAnimation 2s ease infinite;
+    color: blue;
 }
