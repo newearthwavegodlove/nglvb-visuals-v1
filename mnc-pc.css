@@ -32,8 +32,8 @@ input:focus {
 }
 
 #message {
-    position: fixed;
-    /* Keeps the message fixed on the screen */
+    position: absolute;
+    /* Change this to 'fixed' if you want the message to stay in the same place even when scrolling */
     top: 50%;
     /* Center vertically */
     left: 50%;
