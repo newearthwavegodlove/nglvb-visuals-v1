@@ -1,0 +1,61 @@
+body {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+#passwordForm {
+    text-align: center;
+    transition: opacity 2s ease-in-out;
+}
+
+input {
+    font-size: 36px;
+    /* Made it bigger */
+    color: transparent;
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    padding: 10px 20px;
+    /* Added padding for a larger input box */
+    border: 1px solid black;
+    /* Added a border */
+    transition: all 0.5s ease;
+}
+
+input:focus {
+    background-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+}
+
+#message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+#playButton {
+    font-size: 36px;
+    color: transparent;
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: opacity 2s ease-in-out;
+}
+
+#lyrics {
+    font-size: 36px;
+    color: transparent;
+    /* Initially transparent, will set background clip */
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: opacity 2s ease-in-out;
+}
