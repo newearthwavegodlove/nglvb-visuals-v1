@@ -1,9 +1,8 @@
-/* Set the global font to Ubuntu */
+/* Existing styles */
 body {
     font-family: 'Ubuntu', sans-serif;
 }
 
-/* Set the font for h1 to Helvetica */
 h1 {
     font-family: 'Helvetica', sans-serif;
 }
@@ -14,8 +13,9 @@ textarea {
 }
 
 button {
-    display: block;
+    display: inline-block; /* changed to inline-block for side-by-side buttons */
     margin-top: 20px;
+    margin-right: 5px;
 }
 
 .card {
@@ -27,4 +27,8 @@ button {
 
 .glow {
     box-shadow: 0 0 5px #FFCC00, 0 0 10px #FFCC00, 0 0 15px #FF9900, 0 0 20px #FF9900;
+}
+
+.activeBtn {
+    background-color: #ccc;
 }

@@ -2,15 +2,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const splitButton = document.getElementById("splitButton");
   const inputText = document.getElementById("inputText");
   const output = document.getElementById("output");
+  let customWordCount = 1000;
 
-  splitButton.addEventListener("click", () => {
-    const text = inputText.value;
+  const wordCountButtons = document.querySelectorAll(".wordCountBtn");
+  
+  function updateSections() {
+    let text = inputText.value;
+
+    // New Code: Remove newline characters and replace multiple spaces with single space
+    text = text.replace(/\n+/g, ' ').replace(/\s+/g, ' ').trim();
+
     const words = text.split(" ");
-    const sections = [];
-    let currentSection = "";
+    const sections = [];  // Initialize sections
+    let currentSection = "";  // Initialize currentSection
 
     words.forEach((word, index) => {
-      if (currentSection.split(" ").length + 1 <= 1000) {
+      if (currentSection.split(" ").length + 1 <= customWordCount) {
         currentSection += word + " ";
       } else {
         sections.push(currentSection);
@@ -18,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       if (index === words.length - 1) {
-        sections.push(currentSection);  // Push the last remaining section
+        sections.push(currentSection);
       }
     });
 
@@ -31,11 +38,22 @@ document.addEventListener("DOMContentLoaded", () => {
       const copyText = card.querySelector('.copyText');
       copyText.addEventListener('click', () => {
         navigator.clipboard.writeText(section).then(() => {
-          card.classList.toggle("glow");  // Add or remove the glow effect
+          card.classList.toggle("glow");
         });
       });
 
       output.appendChild(card);
     });
+  }
+
+  wordCountButtons.forEach(button => {
+    button.addEventListener("click", (e) => {
+      customWordCount = parseInt(e.target.getAttribute("data-wordcount"));
+      wordCountButtons.forEach(btn => btn.classList.remove("activeBtn"));
+      e.target.classList.add("activeBtn");
+      updateSections();
+    });
   });
+
+  splitButton.addEventListener("click", updateSections);
 });
