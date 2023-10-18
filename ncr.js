@@ -5,3 +5,11 @@ function hoverEffect() {
 function normalEffect() {
     document.getElementById("rainforestBtn").style.backgroundColor = "#4CAF50";
 }
+
+function textHoverEffect() {
+    document.getElementById("welcomeDiv").style.color = "green";
+}
+
+function textNormalEffect() {
+    document.getElementById("welcomeDiv").style.color = "black";
+}
