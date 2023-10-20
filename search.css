@@ -1,0 +1,16 @@
+#title {
+    font-family: 'Satisfy', cursive;
+    font-size: 36px;
+    margin-top: 50px; /* Moves the title up */
+    text-align: center;
+}
+
+#search-box {
+    margin-top: 20px; /* Adds some space below the title */
+    text-align: center;
+}
+
+#search-input {
+    border: 1px solid black; /* Gives thin edges */
+    padding: 10px;
+}
