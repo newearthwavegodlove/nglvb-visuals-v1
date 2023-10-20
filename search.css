@@ -13,4 +13,72 @@
 #search-input {
     border: 1px solid black; /* Gives thin edges */
     padding: 10px;
+    border: 2px solid;
+    border-image-source: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    border-image-slice: 1;
+    animation: borderGradient 8s infinite;
 }
+
+@keyframes borderGradient {
+  0% {
+    border-image-source: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+  }
+  25% {
+    border-image-source: linear-gradient(135deg, red, orange, yellow, green, blue, indigo, violet);
+  }
+  50% {
+    border-image-source: linear-gradient(180deg, red, orange, yellow, green, blue, indigo, violet);
+  }
+  75% {
+    border-image-source: linear-gradient(225deg, red, orange, yellow, green, blue, indigo, violet);
+  }
+  100% {
+    border-image-source: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet);
+  }
+}
+
+/* adjust */
+
+@keyframes shimmer {
+  0% {
+    background-position: -100% 0%;
+  }
+  100% {
+    background-position: 200% 0%;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -100% 0%;
+  }
+  50% {
+    background-position: 200% 0%;
+  }
+  100% {
+    background-position: -100% 0%;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -100% 0%;
+  }
+  50% {
+    background-position: 200% 0%;
+  }
+  100% {
+    background-position: -100% 0%;
+  }
+}
+
+.golden-shimmer-text {
+    font-size: 36px;
+    background: linear-gradient(to bottom right, black, #FFD700, gold, black, #FFD700); 
+    background-size: 500% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shimmer 10s infinite;
+}
+
