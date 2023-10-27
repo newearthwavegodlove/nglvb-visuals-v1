@@ -46,3 +46,19 @@ h1 {
     font-weight: bold;
     margin-bottom: 10px;
 }
+
+#passwordForm {
+    text-align: center;
+    transition: opacity 2s ease-in-out;
+}
+input {
+    font-size: 36px;
+    color: transparent;
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    padding: 10px 20px;
+    border: 1px solid black;
+    transition: all 0.5s ease;
+}
+
